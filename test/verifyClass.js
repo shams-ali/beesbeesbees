@@ -97,7 +97,10 @@ var verifyClass = function(constructor) {
         }
 
         it('has a .prototype.constructor property that points back to the constructor itself', function() {
+          console.log(constructor);
+          console.log(constructor.prototype.constructor);
           expect(constructor.prototype.constructor).to.equal(constructor);
+
         });
 
         var extendsConstructor = requireOption('extendsConstructor');
